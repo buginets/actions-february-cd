@@ -29,8 +29,8 @@ jobs:
       - name: Generate kubeconfig file  
         run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project actions-90
 
-      - name: test
-        run: kubectl get nodes      
+      - name: insatll app
+        run: helm upgrade --install flask ./flask     
 
                         
       
